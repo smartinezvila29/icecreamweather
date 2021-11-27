@@ -4,7 +4,7 @@ import { View, Text} from "react-native";
 export default function City() {
     return (
         <View>
-            <Text>Choose a city...</Text>
+            <Text>City...</Text>
         </View>
         );
 }
