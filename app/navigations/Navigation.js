@@ -17,12 +17,10 @@ export default function Navigation(){
         <NavigationContainer>
             <Tab.Navigator
             initialRouteName="home"
-            tabBarOptions={{
-                inactiveTintColor:"#656565",
-                activeTintColor:"#00a680",
-            }}
             screenOptions={({ route }) => ({
                 tabBarIcon: ({ color }) => screenOptions(route, color),
+                tabBarActiveTintColor: '#155db1',
+                tabBarInactiveTintColor: '#81c9fa',
             })}
             >
                 <Tab.Screen name="search" component={Search} options={{ title: "Search"}}/>
