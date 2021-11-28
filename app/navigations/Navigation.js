@@ -2,7 +2,6 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "react-native-elements/dist/icons/Icon";
-import CitysStack from "./CitysStack";
 import RecentlySearchedStack from "./RecentlySearchedStack";
 import AccountStack from "./AccountStack";
 import Home from "../screens/Home";
