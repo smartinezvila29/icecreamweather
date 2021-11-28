@@ -12,7 +12,17 @@ export default function Home() {
         />
       </View>
       <View style={styles.contenedor}>
-        <Text style={styles.titulo}> Home Page</Text>
+        <Text style={styles.titulo}>Home Page</Text>
+      </View>
+      <View style={styles.contenedor}>
+        <Text style={styles.titulo}>Bienvenido a ClimApp</Text>
+        <Text style={styles.presentar}> Todo lo que necesitas saber del clima, en un solo sitio.</Text>
+      </View>
+      <View>
+      <Image
+        style={styles.imageHome}
+          source={require("../assets/img/clima.png")}
+          />
       </View>
     </ScrollView>
     );
@@ -21,6 +31,11 @@ export default function Home() {
 const styles = StyleSheet.create({
     banner: {
       height: 200,
+      flex: 1,
+    },
+    imageHome:{
+      height: 350,
+      width: 350,
       flex: 1,
     },
     titulo: {
