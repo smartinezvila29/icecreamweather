@@ -2,7 +2,6 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "react-native-elements/dist/icons/Icon";
-import CitysStack from "./CitysStack";
 import RecentlySearchedStack from "./RecentlySearchedStack";
 import AccountStack from "./AccountStack";
 import Home from "../screens/Home";
@@ -25,7 +24,6 @@ export default function Navigation(){
             >
                 <Tab.Screen name="search" component={Search} options={{ title: "Search"}}/>
                 <Tab.Screen name="home" component={Home} options={{ title: "Home"}}/>
-                <Tab.Screen name="city" component={CitysStack} options={{ title: "City"}}/>
                 <Tab.Screen name="recently" component={RecentlySearchedStack} options={{ title: "Last search"}}/>
                 <Tab.Screen name="aboutus" component={Aboutus} options={{ title: "About us"}}/>
                 <Tab.Screen name="account" component={AccountStack} options={{ title: "Login"}}/>
@@ -43,9 +41,6 @@ function screenOptions(route, color)
             break;
         case "home":
             iconName = "home-outline";
-            break;
-        case "city":
-            iconName = "map-search-outline";
             break;
         case "recently":
             iconName = "history";
