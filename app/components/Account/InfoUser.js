@@ -55,7 +55,7 @@ export default function InfoUser(props) {
                     photoURL: result
                 };
                 await firebase.auth().currentUser.updateProfile(update);
-                //await firebase.auth().currentUser.reload();
+                await firebase.auth().currentUser.reload();
                 setLoading(false);
         })
         .catch(() => {

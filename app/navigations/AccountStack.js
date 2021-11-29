@@ -1,40 +1,29 @@
-import React from "react";
+import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
-import { StyleSheet } from "react-native";
-import Account from "../screens/Account/Account";
-import Login from "../screens/Account/Login"
-import Register from "../screens/Account/Register"
+import Accounts from '../screens/Account/Account';
+import Login from '../screens/Account/Login';
+import Register from '../screens/Account/Register';
 
 const Stack = createStackNavigator();
 
-export default function AccountStack(){
+export default function AccountsStack(){
     return (
         <Stack.Navigator>
-            <Stack.Screen 
-            style={styles.banner}
-            source={require("../assets/img/climapp_banner.png")}
-            name="citys"
-            component={Account}
-            options={{title:"Login"}}
+            <Stack.Screen
+                name='accounts'
+                component={Accounts}
+                options={{ title: 'Cuenta'}}
             />
             <Stack.Screen
-                name="login"
+                name='login'
                 component={Login}
-                options={{title:"Login"}}
+                options={{ title: 'Iniciar sesión'}}
             />
             <Stack.Screen
-                name="register"
+                name='register'
                 component={Register}
-                options={{ title: "Registro" }}
+                options={{ title: 'Registro'}}
             />
         </Stack.Navigator>
-    )
+    );
 }
-
-const styles = StyleSheet.create({
-        banner: {
-        height: 200,
-        flex: 1,
-        backgroundColor: "#80CED6"
-        }
-    });
